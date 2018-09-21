@@ -86,7 +86,7 @@ def all_supplies_in_holidays(holiday_hash)
       puts "#{k.capitalize}:"
       all_supplies_in_holidays(e)
     else
-      puts " #{k.capitalize}: #{e.join(\", \")}"
+      puts " #{k.capitalize}: #{e.join(', ')}"
     end
   end
 
