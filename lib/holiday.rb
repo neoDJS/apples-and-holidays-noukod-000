@@ -83,7 +83,7 @@ def all_supplies_in_holidays(holiday_hash)
 
   holiday_hash.each do |k, e|
     if e.is_a? Hash
-      puts "#{k.capitalize.tr('_', ' ')}:"
+      puts "#{k.capitalize.split('_').join(' ')}:"
       all_supplies_in_holidays(e)
     else
       puts "  #{k.capitalize}: #{e.join(', ')}"
