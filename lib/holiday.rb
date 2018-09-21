@@ -86,7 +86,7 @@ def all_supplies_in_holidays(holiday_hash)
       puts "#{k.to_s.tr('_', ' ').capitalize}:"
       all_supplies_in_holidays(e)
     else
-      puts "  #{k.to_s.tr('_', ' ').capitalize}: #{e.join(', ')}"
+      puts "  #{k.to_s.split('_').collect(&:capitalize).join(' ')}: #{e.join(', ')}"
     end
   end
 
